@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="application.properties"/>
+
+
+    <bean id="EA824" class="ru.xml.engine.EA824"></bean>
+    <bean id="duratecHE" class="ru.xml.engine.DuratecHE"></bean>
+    <bean id="lada2121" class="ru.xml.engine.LADA2121"></bean>
+
+    <bean id="audi" class="ru.xml.cars.Audi">
+        <constructor-arg ref="EA824"/>
+        <property name="color" value="${color.blue}"/>
+    </bean>
+    <bean id="ford" class="ru.xml.cars.Ford">
+        <constructor-arg ref="duratecHE"/>
+        <property name="color" value="${color.red}"/>
+    </bean>
+    <bean id="lada" class="ru.xml.cars.Lada">
+        <property name="engine" ref="lada2121"/>
+        <property name="color" value="${color.green}"/>
+    </bean>
+
+
+</beans>
