@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TestController {
 
     @RequestMapping("/")
-    public String getMainPage(){
-        return "main-form";
-    }
+    public String getMainPage() { return "main-page"; }
+
+    @RequestMapping("/mainForm")
+    public String getMainForm() { return "main-form"; }
 
     @RequestMapping("/processForm")
     public String processForm() { return "processForm"; }

@@ -11,9 +11,11 @@
     <title>ProcessForm</title>
 </head>
 <body>
-    <br><br>
-Hello, this is the ProcessForm
-    <br><br>
-Car Name: ${param.carName}
+<h2>
+            <br><br>
+        Hello, this is the ProcessForm
+            <br><br>
+        Car Name: ${param.carName}
+</h2>
 </body>
 </html>
