@@ -2,18 +2,18 @@
   Created by IntelliJ IDEA.
   User: a17839280
   Date: 15/01/2022
-  Time: 14:27
+  Time: 14:44
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Main Form</title>
+    <title>ProcessForm</title>
 </head>
 <body>
-    <form action="processForm" method="get">
-        <input type="text" name="carName" placeholder="Enter the Car name">
-        <input type="submit">
-    </form>
+    <br><br>
+Hello, this is the ProcessForm
+    <br><br>
+Car Name: ${param.carName}
 </body>
 </html>

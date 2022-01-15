@@ -6,8 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
 
-    @RequestMapping("/main")
+    @RequestMapping("/")
     public String getMainPage(){
         return "main-form";
     }
+
+    @RequestMapping("/processForm")
+    public String processForm() { return "processForm"; }
 }
