@@ -8,6 +8,7 @@
 <h2>
     Hello,i'm a Spring MVC!
     <br>
+    <hr>
     <br>
     <a href="mainForm">Form Enter Car name</a>
 </h2>

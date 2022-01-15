@@ -11,7 +11,7 @@
     <title>Main Form</title>
 </head>
 <body>
-    <form action="processForm" method="get">
+    <form action="processForm2" method="get">
         <input type="text" name="carName" placeholder="Enter the Car name">
         <input type="submit">
     </form>

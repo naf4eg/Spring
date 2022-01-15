@@ -16,6 +16,8 @@
         Hello, this is the ProcessForm
             <br><br>
         Car Name: ${param.carName}
+            <br><br>
+        Message: ${message}
 </h2>
 </body>
 </html>
