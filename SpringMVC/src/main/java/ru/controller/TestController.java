@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
 
-    @RequestMapping("/")
+    @RequestMapping("/main")
     public String getMainPage(){
-        return "main-page";
+        return "main-form";
     }
 }
