@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class TestController {
 
-    @RequestMapping("/")
-    public String getMainPage() { return "main-page"; }
-
     @RequestMapping("/mainForm")
     public String getMainForm() { return "main-form"; }
 
