@@ -14,8 +14,7 @@
             <form:options items="${car.countryList}"/>
         </form:select>
         <br><br>
-        Diesel <form:radiobutton path="engineFuel" value="Diesel"/>
-        Petrol <form:radiobutton path="engineFuel" value="Petrol"/>
+        <form:radiobuttons items="${car.engineFuelList}"  path="engineFuel"/>
         <br><br>
         <input type="submit" name="submit"/>
     </form:form>

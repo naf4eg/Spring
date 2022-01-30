@@ -8,12 +8,16 @@ public class Car {
     private String country;
     private String engineFuel;
     private HashMap<String, String> countryList = new HashMap();
+    private HashMap<String, String> engineFuelList = new HashMap();
 
     public Car() {
         countryList.put("JP", "Japan");
         countryList.put("RU", "Russia");
         countryList.put("US", "United States of America");
         countryList.put("DE", "Germany");
+
+        engineFuelList.put("Diesel","Diesel");
+        engineFuelList.put("Petrol","Petrol");
     }
 
     public String getModelName() {
@@ -54,5 +58,13 @@ public class Car {
 
     public void setEngineFuel(String engineFuel) {
         this.engineFuel = engineFuel;
+    }
+
+    public HashMap<String, String> getEngineFuelList() {
+        return engineFuelList;
+    }
+
+    public void setEngineFuelList(HashMap<String, String> engineFuelList) {
+        this.engineFuelList = engineFuelList;
     }
 }
