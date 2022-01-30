@@ -6,6 +6,7 @@ public class Car {
     private String modelName;
     private String color;
     private String country;
+    private String engineFuel;
     private HashMap<String, String> countryList = new HashMap();
 
     public Car() {
@@ -45,5 +46,13 @@ public class Car {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getEngineFuel() {
+        return engineFuel;
+    }
+
+    public void setEngineFuel(String engineFuel) {
+        this.engineFuel = engineFuel;
     }
 }

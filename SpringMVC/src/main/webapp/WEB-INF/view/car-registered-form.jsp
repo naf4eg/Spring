@@ -9,5 +9,7 @@
     Color: ${car.color}
     <br><br>
     Country: ${car.country}
+    <br><br>
+    Car fuel: ${car.engineFuel}
 </body>
 </html>
