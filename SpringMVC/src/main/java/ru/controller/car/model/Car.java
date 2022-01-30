@@ -1,4 +1,4 @@
-package ru.controller.car;
+package ru.controller.car.model;
 
 public class Car {
     private String modelName;

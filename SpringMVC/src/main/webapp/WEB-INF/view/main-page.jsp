@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,10 +10,8 @@
     <hr>
     <br>
     <a href="mainForm">Form Enter Car name</a>
-    br>
     <hr>
-    <br>
-    <a href="car/showForm">Show Car Form</a>
+    <a href="car/showRegistrationForm">Show registration Car Form</a>
 
 </h2>
 </body>
