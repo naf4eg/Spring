@@ -5,7 +5,9 @@
 </head>
 <body>
     Car: ${car.modelName}
-    <br>
+    <br><br>
     Color: ${car.color}
+    <br><br>
+    Country: ${car.country}
 </body>
 </html>
