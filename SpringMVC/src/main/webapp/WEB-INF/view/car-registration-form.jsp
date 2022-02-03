@@ -16,6 +16,8 @@
         <br><br>
         <form:radiobuttons items="${car.engineFuelList}"  path="engineFuel"/>
         <br><br>
+        <form:checkboxes items="${car.listCarOptions}" path="listChooseCarOptions" />
+        <br><br>
         <input type="submit" name="submit"/>
     </form:form>
 </body>

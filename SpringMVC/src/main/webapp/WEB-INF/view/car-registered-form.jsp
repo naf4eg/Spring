@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,5 +12,11 @@
     Country: ${car.country}
     <br><br>
     Car fuel: ${car.engineFuel}
+    <br><br>
+    <ul>
+        <c:forEach var="temp" items="${car.listChooseCarOptions}">
+            <li>${temp}</li>
+        </c:forEach>
+    </ul>
 </body>
 </html>

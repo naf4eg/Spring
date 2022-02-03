@@ -1,14 +1,21 @@
 package ru.controller.car.model;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
+/**
+ * Car
+ */
 public class Car {
     private String modelName;
     private String color;
     private String country;
     private String engineFuel;
-    private HashMap<String, String> countryList = new HashMap();
-    private HashMap<String, String> engineFuelList = new HashMap();
+    final private HashMap<String, String> countryList = new HashMap<String, String>();
+    final private HashMap<String, String> engineFuelList = new HashMap<String, String>();
+    final private List<String> listCarOptions = new LinkedList<String>();
+    private List<String> listChooseCarOptions = new LinkedList<String>();
 
     public Car() {
         countryList.put("JP", "Japan");
@@ -18,6 +25,8 @@ public class Car {
 
         engineFuelList.put("Diesel","Diesel");
         engineFuelList.put("Petrol","Petrol");
+
+        listCarOptions.addAll(List.of("Audio System SONY", "Conditioner", "Heated Steering Wheel"));
     }
 
     public String getModelName() {
@@ -40,10 +49,6 @@ public class Car {
         return countryList;
     }
 
-    public void setCountryList(HashMap<String, String> countryList) {
-        this.countryList = countryList;
-    }
-
     public String getCountry() {
         return country;
     }
@@ -64,7 +69,15 @@ public class Car {
         return engineFuelList;
     }
 
-    public void setEngineFuelList(HashMap<String, String> engineFuelList) {
-        this.engineFuelList = engineFuelList;
+    public List<String> getListCarOptions() {
+        return listCarOptions;
+    }
+
+    public List<String> getListChooseCarOptions() {
+        return listChooseCarOptions;
+    }
+
+    public void setListChooseCarOptions(List<String> listChooseCarOptions) {
+        this.listChooseCarOptions = listChooseCarOptions;
     }
 }

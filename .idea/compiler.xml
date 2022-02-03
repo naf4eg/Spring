@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringCore" target="1.7" />
-      <module name="SpringMVC" target="1.7" />
+      <module name="SpringMVC" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
