@@ -1,3 +1,4 @@
 # Project exclude paths
 /SpringCore/target/
 /.idea/
+/.idea/libraries/
