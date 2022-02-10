@@ -11,7 +11,7 @@ import ru.controller.car.model.Driver;
 @RequestMapping("/car")
 public class CarController {
     private static final String CAR = "car";
-    private static final String DRIVER = "DRIVER";
+    private static final String DRIVER = "driver";
 
     @RequestMapping("/showRegistrationForm")
     String showRegistrationForm(Model model){

@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Car Registration Form</title>
+
+    <style>
+        .error{color:red}
+    </style>
 </head>
 <body>
     <form:form action="showRegisteredForm" modelAttribute="car">
@@ -17,8 +21,16 @@
         <form:radiobuttons items="${car.engineFuelList}"  path="engineFuel"/>
         <br><br>
         <form:checkboxes items="${car.listCarOptions}" path="listChooseCarOptions" />
-        <br><br>
-        <input type="submit" name="submit"/>
+        <br><br><br><br>
+
+        <form:form action="showRegisteredForm" modelAttribute="driver">
+            Driver first name (*): <form:input path="firstName"/><form:errors path="firstName" cssClass="error"/>
+            <br><br>
+            Driver last name (*):<form:input path="lastName"/><form:errors path="lastName" cssClass="error"/>
+            <br><br>
+            <input type="submit" name="submit"/>
+        </form:form>
     </form:form>
+
 </body>
 </html>
