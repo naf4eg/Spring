@@ -2,10 +2,13 @@ package ru.controller.car;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.controller.car.model.Car;
 import ru.controller.car.model.Driver;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/car")
@@ -23,10 +26,11 @@ public class CarController {
     @RequestMapping("/showRegisteredForm")
     String showRegisteredForm(
             @ModelAttribute(CAR) Car theCar,
-            @ModelAttribute(DRIVER) Driver theDriver
+            @Valid @ModelAttribute(DRIVER) Driver theDriver, BindingResult theDriverBinding
     ) {
+        System.out.println("theDriverBinding: " + theDriverBinding.hasErrors());
         System.out.println(theCar.getModelName() + " " + theCar.getColor());
         System.out.println(theDriver.getFirstName() + " " + theDriver.getLastName());
-        return "car-registered-form";
+        return theDriverBinding.hasErrors() ? "car-registration-form" : "car-registered-form";
     }
 }

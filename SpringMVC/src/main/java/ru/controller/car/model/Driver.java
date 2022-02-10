@@ -7,12 +7,12 @@ import javax.validation.constraints.Size;
  * Driver car
  */
 public class Driver {
-    @NotNull(message = "is required")
-    @Size(min = 1)
+    @NotNull
+    @Size(min = 1, message = "is required")
     private String firstName;
 
-    @NotNull(message = "is required")
-    @Size(min = 1)
+    @NotNull
+    @Size(min = 1, message = "is required")
     private String lastName;
 
     public String getFirstName() {
@@ -20,7 +20,7 @@ public class Driver {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstName = firstName.trim();
     }
 
     public String getLastName() {
@@ -28,6 +28,6 @@ public class Driver {
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastName = lastName.trim();
     }
 }

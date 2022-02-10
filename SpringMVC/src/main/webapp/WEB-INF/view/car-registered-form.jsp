@@ -18,5 +18,7 @@
             <li>${temp}</li>
         </c:forEach>
     </ul>
+    <br><br>
+    Driver Full Name: ${driver.firstName} ${driver.lastName}
 </body>
 </html>

@@ -24,9 +24,9 @@
         <br><br><br><br>
 
         <form:form action="showRegisteredForm" modelAttribute="driver">
-            Driver first name (*): <form:input path="firstName"/><form:errors path="firstName" cssClass="error"/>
+            Driver first name (*): <form:input path="firstName"/>  <form:errors path="firstName" cssClass="error"/>
             <br><br>
-            Driver last name (*):<form:input path="lastName"/><form:errors path="lastName" cssClass="error"/>
+            Driver last name (*):<form:input path="lastName"/>  <form:errors path="lastName" cssClass="error"/>
             <br><br>
             <input type="submit" name="submit"/>
         </form:form>
