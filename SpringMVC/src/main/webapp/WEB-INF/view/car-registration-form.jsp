@@ -30,6 +30,8 @@
             <br><br>
             Driving experience (0-50):<form:input path="drivingExperience"/>  <form:errors path="drivingExperience" cssClass="error"/>
             <br><br>
+            Driver's license:<form:input path="driversLicense"/>  <form:errors path="driversLicense" cssClass="error"/>
+            <br><br>
             <input type="submit" name="submit"/>
         </form:form>
     </form:form>

@@ -22,5 +22,7 @@
     Driver Full Name: ${driver.firstName} ${driver.lastName}
     <br><br>
     Driving experience: ${driver.drivingExperience}
+    <br><br>
+    Driver's license: ${driver.driversLicense}
 </body>
 </html>

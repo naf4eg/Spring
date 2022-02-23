@@ -1,9 +1,6 @@
 package ru.controller.car.model;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 /**
  * Driver car
@@ -20,6 +17,17 @@ public class Driver {
     @Min(value = 0, message = "incorrect driving experience")
     @Max(value = 50, message = "incorrect driving experience")
     private int drivingExperience;
+
+    @Pattern(regexp = "[a-zA-Z]{4}[0-9]{5}", message = "aaAA12345")
+    private String driversLicense;
+
+    public String getDriversLicense() {
+        return driversLicense;
+    }
+
+    public void setDriversLicense(String driversLicense) {
+        this.driversLicense = driversLicense;
+    }
 
     public int getDrivingExperience() {
         return drivingExperience;
