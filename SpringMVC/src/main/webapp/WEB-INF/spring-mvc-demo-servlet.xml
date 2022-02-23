@@ -27,16 +27,17 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-<!--	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>-->
+<!--	<mvc:resources mapping="/resources/**" location="/"></mvc:resources>-->
 
 <!--	&lt;!&ndash; add country list&ndash;&gt;-->
 <!--	<util:properties id="countryOptions" location="classpath:countries.properties"/>-->
 
-<!--	&lt;!&ndash; add error messages from messages.properties&ndash;&gt;-->
-<!--	<bean id="messageSource"-->
-<!--		  class="org.springframework.context.support.ResourceBundleMessageSource">-->
-<!--		<property name="basenames" value="resources/messages.properties"/>-->
-<!--	</bean>-->
+	<!-- add error messages from messages.properties-->
+	<bean id="messageSource"
+		  class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames" value="messages"/>
+		<property name="useCodeAsDefaultMessage" value="true" />
+	</bean>
 
 </beans>
 
