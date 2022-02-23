@@ -28,7 +28,7 @@
             <br><br>
             Driver last name (*):<form:input path="lastName"/>  <form:errors path="lastName" cssClass="error"/>
             <br><br>
-            Driving experience (10-50):<form:input path="drivingExperience"/>  <form:errors path="drivingExperience" cssClass="error"/>
+            Driving experience (0-50):<form:input path="drivingExperience"/>  <form:errors path="drivingExperience" cssClass="error"/>
             <br><br>
             <input type="submit" name="submit"/>
         </form:form>
