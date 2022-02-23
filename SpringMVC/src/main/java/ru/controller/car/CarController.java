@@ -26,7 +26,8 @@ public class CarController {
     @RequestMapping("/showRegisteredForm")
     String showRegisteredForm(
             @ModelAttribute(CAR) Car theCar,
-            @Valid @ModelAttribute(DRIVER) Driver theDriver, BindingResult theDriverBinding
+            @Valid @ModelAttribute(DRIVER) Driver theDriver,
+            BindingResult theDriverBinding
     ) {
         System.out.println("theDriverBinding: " + theDriverBinding.hasErrors());
         System.out.println(theCar.getModelName() + " " + theCar.getColor());
