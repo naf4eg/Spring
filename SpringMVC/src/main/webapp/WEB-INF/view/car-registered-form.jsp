@@ -24,5 +24,7 @@
     Driving experience: ${driver.drivingExperience}
     <br><br>
     Driver's license: ${driver.driversLicense}
+    <br><br>
+    Driver's code: ${driver.driverCode}
 </body>
 </html>

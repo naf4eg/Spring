@@ -32,6 +32,8 @@
             <br><br>
             Driver's license:<form:input path="driversLicense"/>  <form:errors path="driversLicense" cssClass="error"/>
             <br><br>
+            Driver's code:<form:input path="driverCode"/>  <form:errors path="driverCode" cssClass="error"/>
+            <br><br>
             <input type="submit" name="submit"/>
         </form:form>
     </form:form>

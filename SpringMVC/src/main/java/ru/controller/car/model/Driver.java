@@ -1,5 +1,7 @@
 package ru.controller.car.model;
 
+import ru.controller.car.model.annotation.validation.DriverCode;
+
 import javax.validation.constraints.*;
 
 /**
@@ -20,6 +22,17 @@ public class Driver {
 
     @Pattern(regexp = "[a-zA-Z]{4}[0-9]{5}", message = "aaAA12345")
     private String driversLicense;
+
+    @DriverCode(value = "RUS", message = "RUS12312")
+    private String driverCode;
+
+    public String getDriverCode() {
+        return driverCode;
+    }
+
+    public void setDriverCode(String driverCode) {
+        this.driverCode = driverCode;
+    }
 
     public String getDriversLicense() {
         return driversLicense;

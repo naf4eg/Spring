@@ -29,7 +29,7 @@ public class CarController {
             @Valid @ModelAttribute(DRIVER) Driver theDriver,
             BindingResult theDriverBinding
     ) {
-        System.out.println("has error: " + theDriverBinding.hasErrors());
+        System.out.println("has error: " + theDriverBinding);
         System.out.println(theCar.getModelName() + " " + theCar.getColor());
         System.out.println(theDriver.getFirstName() + " " + theDriver.getLastName());
         return theDriverBinding.hasErrors() ? "car-registration-form" : "car-registered-form";
