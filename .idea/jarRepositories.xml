@@ -7,9 +7,9 @@
       <option name="url" value="http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/ufs-platform_thirdparty" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="PPRB-dependency-sigma" />
-      <option name="name" value="PPRB-dependency-sigma" />
-      <option name="url" value="http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/Platform_release" />
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="ufs-platform-snapshot" />
@@ -32,9 +32,54 @@
       <option name="url" value="http://nexus.sigma.sbrf.ru:8099/nexus/content/groups/public" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://insecure.repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="efs-release" />
       <option name="name" value="efs-release" />
       <option name="url" value="http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/efs_release" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots-repo" />
+      <option name="name" value="Nexus Snapshots" />
+      <option name="url" value="http://insecure.repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="vaadin-prereleases" />
+      <option name="name" value="vaadin-prereleases" />
+      <option name="url" value="http://maven.vaadin.com/vaadin-prereleases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="http://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="PPRB-dependency-sigma" />
+      <option name="name" value="PPRB-dependency-sigma" />
+      <option name="url" value="http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/Platform_release" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://repo1.maven.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots-repo" />
+      <option name="name" value="Nexus Snapshots" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="efs-snapshot" />
@@ -47,19 +92,9 @@
       <option name="url" value="http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/efs_thirdparty" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="jboss.community" />
-      <option name="name" value="JBoss Community repository" />
-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="ufs-platform-release" />
       <option name="name" value="ufs-platform-release" />
       <option name="url" value="http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/ufs-platform_release" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="vaadin-prereleases" />
-      <option name="name" value="vaadin-prereleases" />
-      <option name="url" value="http://maven.vaadin.com/vaadin-prereleases/" />
     </remote-repository>
   </component>
 </project>

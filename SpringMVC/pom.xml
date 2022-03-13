@@ -17,6 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <hibernate.version>6.2.1.Final</hibernate.version>
   </properties>
 
   <dependencies>
@@ -54,22 +55,22 @@
     <dependency>
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator</artifactId>
-      <version>6.2.1.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator-cdi</artifactId>
-      <version>6.2.1.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.hibernate.validator</groupId>
-      <artifactId>hibernate-validator-osgi</artifactId>
-      <version>6.2.1.Final</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.hibernate.validator</groupId>-->
+<!--      <artifactId>hibernate-validator-osgi</artifactId>-->
+<!--      <version>${hibernate.version}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator-annotation-processor</artifactId>
-      <version>6.2.1.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>
   </dependencies>
 

@@ -12,6 +12,8 @@
       <list>
         <option value="$PROJECT_DIR$/SpringMVC/pom.xml" />
         <option value="$PROJECT_DIR$/SpringCore/pom.xml" />
+        <option value="$PROJECT_DIR$/Hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/hibernate/pom.xml" />
       </list>
     </option>
   </component>
