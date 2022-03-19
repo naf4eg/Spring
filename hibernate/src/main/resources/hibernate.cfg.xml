@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate?useSSL=false</property> <!-- BD Mane -->
+        <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+        <property name="connection.username">hiber</property> <!-- DB User -->
+        <property name="connection.password">password</property> <!-- DB Password -->
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQL10Dialect</property> <!-- DB Dialect -->
+        <property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+
+        <property name="show_sql">true</property> <!-- Show SQL in console -->
+        <property name="format_sql">true</property> <!-- Show SQL formatted -->
+
+<!--        &lt;!&ndash;for Bi Directional mode&ndash;&gt;-->
+<!--        <mapping class="ru.onetoone.model.PersonDetail"/>-->
+<!--        <mapping class="ru.onetoone.model.Person"/>-->
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,6 +1,5 @@
 package ru.learn.hibernate.jdbc;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class TestJDBC {
@@ -10,7 +9,7 @@ public class TestJDBC {
         String password = "password";
 
         try {
-            System.out.println("Connect ===>>");
+            System.out.print("Connect ===>>  ");
 
             DriverManager.getConnection(jdbc, user, password);
 
