@@ -11,12 +11,10 @@
         <module name="SpringMVC" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="hibernate" target="8" />
-      <module name="hibernate-leran" target="1.5" />
-      <module name="SpringCore" target="1.7" />
-      <module name="SpringMVC" target="9" />
-      <module name="untitled" target="1.7" />
+    <bytecodeTargetLevel target="11">
+      <module name="hibernate" target="11" />
+      <module name="SpringCore" target="11" />
+      <module name="SpringMVC" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
