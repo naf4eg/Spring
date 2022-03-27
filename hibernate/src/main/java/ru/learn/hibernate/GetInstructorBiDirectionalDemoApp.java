@@ -1,5 +1,6 @@
 package ru.learn.hibernate;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import ru.learn.hibernate.model.Instructor;
@@ -17,10 +18,10 @@ public class GetInstructorBiDirectionalDemoApp {
             .addAnnotatedClass(Instructor.class)
             .addAnnotatedClass(InstructorDetail.class)
             .buildSessionFactory();
+    private static Session session = sessionFactory.getCurrentSession();
 
     public static void main(String[] args) {
         try {
-            var session = sessionFactory.getCurrentSession();
             session.beginTransaction();
             var instructorDetail = session.get(InstructorDetail.class, 1L);
             System.out.println("instructorDetail: " + instructorDetail.toString());
@@ -29,6 +30,11 @@ public class GetInstructorBiDirectionalDemoApp {
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            //session.close if ids is not find
+            //it is prevents leak pool
+            session.close();
+            sessionFactory.close();
         }
     }
 }
