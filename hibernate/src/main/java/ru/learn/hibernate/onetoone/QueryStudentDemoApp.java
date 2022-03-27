@@ -1,4 +1,4 @@
-package ru.learn.hibernate;
+package ru.learn.hibernate.onetoone;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

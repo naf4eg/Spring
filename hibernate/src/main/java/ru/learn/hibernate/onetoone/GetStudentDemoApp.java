@@ -1,11 +1,11 @@
-package ru.learn.hibernate;
+package ru.learn.hibernate.onetoone;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import ru.learn.hibernate.model.Student;
 
-public class PrimaryKeyDemoApp {
+public class GetStudentDemoApp {
 
     static final String HIBERNATE_CFG_FILE = "hibernate.cfg.xml";
 
@@ -19,17 +19,21 @@ public class PrimaryKeyDemoApp {
         Session session = factory.getCurrentSession();
 
         try {
-            System.out.println("Create Students obj...");
-            Student student1 = new Student("Maria", "Kukushkina", "maria@yandex.com");
-            Student student2 = new Student("Denis", "Beketov", "denis@yandex.com");
-            Student student3 = new Student("Alex", "Lovchek", "alex@yandex.com");
+            System.out.println("Create Student obj...");
+            Student student = new Student("Get", "Student", "get@yandex.com");
             session.beginTransaction();
-            System.out.println("Saving the Students...");
-            session.save(student1);
-            session.save(student2);
-            session.save(student3);
+            System.out.println("Saving the Student...");
+            session.save(student);
             session.getTransaction().commit();
-            System.out.println("Objects saved...");
+            System.out.println("Object saved...Id: " + student.getId());
+
+            session = factory.getCurrentSession();
+            session.beginTransaction();
+            System.out.println("Getting obj...Id: " + student.getId());
+            Student student1 = session.get(Student.class, student.getId());
+            System.out.println("Done get obj...");
+            System.out.println(student1.toString());
+
         } catch (Exception exc) {
             exc.printStackTrace();
         } finally {

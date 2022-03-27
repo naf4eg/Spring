@@ -1,11 +1,11 @@
-package ru.learn.hibernate;
+package ru.learn.hibernate.onetoone;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import ru.learn.hibernate.model.Instructor;
 import ru.learn.hibernate.model.InstructorDetail;
 
-public class DeleteInstructorDemoApp {
+public class CreateInstructorDemoApp {
 
     private final static String HIBERNATE_CFG = "hibernate.cfg.xml";
 
@@ -18,20 +18,30 @@ public class DeleteInstructorDemoApp {
                     .buildSessionFactory();
 
             var session = sessionFactory.getCurrentSession();
-            session.beginTransaction();
-            var instructor = session.get(Instructor.class, 2L);
-            session.getTransaction().commit();
-            System.out.println("instructor = " + instructor);
 
-            session = sessionFactory.getCurrentSession();
-            session.beginTransaction();
-            session.delete(instructor);
-            session.getTransaction().commit();
+            var instructor1 = new Instructor(
+                    "Konstantin",
+                    "Ivanov",
+                    "ivanov@ya.com",
+                    new InstructorDetail(
+                            "IvanovElectronic.youtube.com",
+                            "dancing"
+                    )
+            );
 
-            session = sessionFactory.getCurrentSession();
+            var instructor2 = new Instructor(
+                    "Dmitry",
+                    "Sergeev",
+                    "sergeev@gmail.ru",
+                    new InstructorDetail(
+                            "sergeev_java_tech.youtube.com",
+                            "bicycle"
+                    )
+            );
+
             session.beginTransaction();
-            session.createQuery("from Instructor");
-            session.createQuery("from InstructorDetail ");
+            session.save(instructor1);
+            session.save(instructor2);
             session.getTransaction().commit();
         } catch (Exception exception) {
             exception.printStackTrace();

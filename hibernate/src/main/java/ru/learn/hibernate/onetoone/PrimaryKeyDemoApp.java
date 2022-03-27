@@ -1,11 +1,11 @@
-package ru.learn.hibernate;
+package ru.learn.hibernate.onetoone;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import ru.learn.hibernate.model.Student;
 
-public class CreateStudentDemoApp {
+public class PrimaryKeyDemoApp {
 
     static final String HIBERNATE_CFG_FILE = "hibernate.cfg.xml";
 
@@ -19,13 +19,17 @@ public class CreateStudentDemoApp {
         Session session = factory.getCurrentSession();
 
         try {
-            System.out.println("Create Student obj...");
-            Student student = new Student("Mike", "Gorky", "mike@yandex.com");
+            System.out.println("Create Students obj...");
+            Student student1 = new Student("Maria", "Kukushkina", "maria@yandex.com");
+            Student student2 = new Student("Denis", "Beketov", "denis@yandex.com");
+            Student student3 = new Student("Alex", "Lovchek", "alex@yandex.com");
             session.beginTransaction();
-            System.out.println("Saving the Student...");
-            session.save(student);
+            System.out.println("Saving the Students...");
+            session.save(student1);
+            session.save(student2);
+            session.save(student3);
             session.getTransaction().commit();
-            System.out.println("Object saved...");
+            System.out.println("Objects saved...");
         } catch (Exception exc) {
             exc.printStackTrace();
         } finally {
