@@ -26,7 +26,14 @@ public class Instructor {
     @JoinColumn(name = "instructor_detail_id")
     private InstructorDetail instructorDetail;
 
-    @OneToMany(mappedBy = "instructor", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.DETACH, CascadeType.REFRESH})
+    /**
+     * Use the LAZY fetch, because best practice loading on demand
+     */
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            mappedBy = "instructor",
+            cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.DETACH, CascadeType.REFRESH}
+    )
     private List<Course> courses;
 
     public Instructor() {
@@ -107,7 +114,6 @@ public class Instructor {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", courses=" + courses +
                 '}';
     }
 }
