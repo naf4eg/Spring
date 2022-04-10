@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/SpringCore" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/WebApp" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -14,6 +15,7 @@
         <option value="$PROJECT_DIR$/SpringCore/pom.xml" />
         <option value="$PROJECT_DIR$/Hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/WebApp/pom.xml" />
       </list>
     </option>
   </component>

@@ -2,19 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hibernate" />
         <module name="SpringCore" />
         <module name="SpringMVC" />
+        <module name="hibernate" />
+        <module name="WebApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="hibernate" target="11" />
-      <module name="SpringCore" target="11" />
+      <module name="SpringCore" target="1.7" />
       <module name="SpringMVC" target="11" />
+      <module name="WebApp" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
