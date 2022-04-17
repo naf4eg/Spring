@@ -4,7 +4,10 @@
 <html>
 <head>
 	<title>List Customers</title>
-	
+
+	<link type="text/css"
+		  rel="stylesheet"
+		  href="${pageContext.request.contextPath}/resources/css/style.css"/>
 </head>
 <body>
 
@@ -16,6 +19,12 @@
 
 	<div id="container">
 		<div id="content">
+
+			<input type="button" value="Add Customer"
+				   onclick="window.location.href='addCustomerForm'; return false;"
+				   class="add-button"
+			/>
+
 			<table>
 				<tr>
 					<th>First Name</th>

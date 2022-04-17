@@ -13,4 +13,10 @@ public interface CustomerDAO {
      * @return List Customers
      */
     public List<Customer> getCustomers();
+
+    /**
+     * DAO save customer
+     * @param theCustomer
+     */
+    void saveCustomer(Customer theCustomer);
 }
