@@ -19,4 +19,17 @@ public interface CustomerDAO {
      * @param theCustomer
      */
     void saveCustomer(Customer theCustomer);
+
+    /**
+     * DAO get Customer
+     * @param id Customer from DB
+     * @return Customer
+     */
+    Customer getCustomer(int id);
+
+    /**
+     * DAO delete customer
+     * @param id Customer
+     */
+    void delete(int id);
 }

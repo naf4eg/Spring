@@ -30,13 +30,26 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Email</th>
+					<th>Action</th>
 				</tr>
 
 				<c:forEach var="customer" items="${customers}">
+					<c:url var="updateLink" value="${pageContext.request.contextPath}/customer/updateCustomerForm">
+						<c:param name="customerId" value="${customer.id}"/>
+					</c:url>
+					<c:url var="deleteLink" value="${pageContext.request.contextPath}/customer/deleteCustomer">
+						<c:param name="customerId" value="${customer.id}"/>
+					</c:url>
 					<tr>
 						<td>${customer.firstName}</td>
 						<td>${customer.lastName}</td>
 						<td>${customer.email}</td>
+						<td><a href="${updateLink}">Update</a>
+							 |
+							<a href="${deleteLink}"
+							   onclick="if (!(confirm('Are you sure you want to delete this Customer?')))
+								   return false">Delete</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</table>
