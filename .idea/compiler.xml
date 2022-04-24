@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringCore" />
         <module name="SpringMVC" />
+        <module name="SpringAOP" />
         <module name="hibernate" />
         <module name="WebApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="hibernate" target="11" />
+      <module name="SpringAOP" target="11" />
       <module name="SpringCore" target="1.7" />
       <module name="SpringMVC" target="11" />
       <module name="WebApp" target="11" />
