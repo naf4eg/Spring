@@ -37,4 +37,9 @@ public class LoggingAspect {
     public void beforeAddAccountAdvice6(){
         System.out.println("===>  Before advice method logging with match - execution(any Type add*(ru.aop.example.model.Account, ..))");
     }
+
+    @Before("execution(* add*(..))")
+    public void beforeAddAccountAdvice7(){
+        System.out.println("===>  Before advice method logging with match - execution(any Type and any Params add*(..))");
+    }
 }
