@@ -42,4 +42,9 @@ public class LoggingAspect {
     public void beforeAddAccountAdvice7(){
         System.out.println("===>  Before advice method logging with match - execution(any Type and any Params add*(..))");
     }
+
+    @Before("execution(* ru.aop.example.dao.*.*(..))")
+    public void beforeAddAccountAdvice8(){
+        System.out.println("===>  Before advice method logging with match - execution(* ru.aop.example.dao.*.*(..))");
+    }
 }
