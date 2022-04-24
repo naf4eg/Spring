@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class AccountDAO {
 
     public void addAccount() {
-        System.out.println(getClass() + " ===>  addAccount to DB");
+        System.out.println(getClass() + " ====> call AccountDAO \n");
     }
 }
