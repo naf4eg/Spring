@@ -6,7 +6,7 @@ import ru.aop.example.dao.AccountDAO;
 import ru.aop.example.dao.MembershipDAO;
 import ru.aop.example.model.Account;
 
-public class Main {
+public class PointcutExpressionDemoApp {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DemoConfiguration.class);
         var bean1 = ctx.getBean("accountDAO", AccountDAO.class);
