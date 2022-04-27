@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class LoggingCarsAspect {
+public class LoggingPointcutDeclaration {
 
     /**
-     * (any type  -  package  -  any class  -  any methods  -  (any number of parameters (zero or more)))
+     * (anyType _ package . anyClass . anyMethods . (any number of parameters (zero or more)))
      */
     @Pointcut("execution(* ru.aop.example.dao2.*.*(..))")
     public void getLogVars() {}
