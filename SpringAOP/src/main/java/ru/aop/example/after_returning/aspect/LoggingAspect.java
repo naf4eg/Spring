@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import ru.aop.example.after_returning.model.Account;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 @Aspect
@@ -21,6 +22,15 @@ public class LoggingAspect {
             returning = "accounts"
     )
     public void logFindAccounts(JoinPoint joinPoint, List<Account> accounts) {
+        System.out.println(accounts);
+
+        //example for modify result
+        var account1 = accounts
+                .stream()
+                .filter(account -> account.getType() == Account.Type.DEPOSIT)
+                .collect(Collectors.toList()).get(0);
+
+        accounts.remove(account1);
         System.out.println(accounts);
     }
 }
