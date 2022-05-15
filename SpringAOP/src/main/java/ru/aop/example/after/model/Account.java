@@ -1,4 +1,4 @@
-package ru.aop.example.after_returning.model;
+package ru.aop.example.after.model;
 
 public class Account {
 

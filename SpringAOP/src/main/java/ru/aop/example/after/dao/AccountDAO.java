@@ -1,7 +1,7 @@
-package ru.aop.example.after_returning.dao;
+package ru.aop.example.after.dao;
 
 import org.springframework.stereotype.Component;
-import ru.aop.example.after_returning.model.Account;
+import ru.aop.example.after.model.Account;
 
 import java.util.ArrayList;
 import java.util.List;

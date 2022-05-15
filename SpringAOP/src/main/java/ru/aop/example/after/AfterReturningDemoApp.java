@@ -1,9 +1,9 @@
-package ru.aop.example.after_returning;
+package ru.aop.example.after;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.aop.example.after_returning.configuration.AfterReturningConfiguration;
-import ru.aop.example.after_returning.dao.AccountDAO;
-import ru.aop.example.after_returning.model.Account;
+import ru.aop.example.after.configuration.AfterReturningConfiguration;
+import ru.aop.example.after.dao.AccountDAO;
+import ru.aop.example.after.model.Account;
 
 public class AfterReturningDemoApp {
 

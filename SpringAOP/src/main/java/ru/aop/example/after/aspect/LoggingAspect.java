@@ -1,11 +1,12 @@
-package ru.aop.example.after_returning.aspect;
+package ru.aop.example.after.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
-import ru.aop.example.after_returning.model.Account;
+import ru.aop.example.after.model.Account;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,14 +15,14 @@ import java.util.stream.Collectors;
 @Aspect
 public class LoggingAspect {
 
-    @Pointcut("execution(* ru.aop.example.after_returning.dao.*.find*(..))")
+    @Pointcut("execution(* ru.aop.example.after.dao.*.find*(..))")
     private void accountDaoPointcut() {}
 
     @AfterReturning(
             pointcut = "accountDaoPointcut()",
             returning = "accounts"
     )
-    public void logFindAccounts(JoinPoint joinPoint, List<Account> accounts) {
+    public void logFindAccountsAdvice(JoinPoint joinPoint, List<Account> accounts) {
         System.out.println(accounts);
 
         //example for modify result
@@ -32,5 +33,14 @@ public class LoggingAspect {
 
         accounts.remove(account1);
         System.out.println(accounts);
+    }
+
+    @AfterThrowing(
+            pointcut = "accountDaoPointcut()",
+            throwing = "throwable"
+    )
+    public void logFindAccountThrowAdvice(JoinPoint joinPoint, Throwable throwable) {
+        System.out.println("====>>> FAILURE!!! On method: " + joinPoint.getSignature().toShortString());
+        System.out.println("====>>> Throw: " + throwable);
     }
 }
