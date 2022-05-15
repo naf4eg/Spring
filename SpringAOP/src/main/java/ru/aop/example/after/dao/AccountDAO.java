@@ -20,7 +20,8 @@ public class AccountDAO {
         this.accounts.add(account);
     }
 
-    public List<Account> findAccounts() {
+    public List<Account> findAccounts() throws RuntimeException{
+        if (this.accounts.isEmpty()) throw new RuntimeException();
         return this.accounts;
     }
 }

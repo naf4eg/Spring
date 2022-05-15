@@ -1,10 +1,7 @@
 package ru.aop.example.after.aspect;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 import ru.aop.example.after.model.Account;
 
@@ -42,5 +39,10 @@ public class LoggingAspect {
     public void logFindAccountThrowAdvice(JoinPoint joinPoint, Throwable throwable) {
         System.out.println("====>>> FAILURE!!! On method: " + joinPoint.getSignature().toShortString());
         System.out.println("====>>> Throw: " + throwable);
+    }
+
+    @After("accountDaoPointcut()")
+    public void logFindAccountAfterFinallyAdvice() {
+        System.out.println("====>>> log after Finally Advice");
     }
 }
