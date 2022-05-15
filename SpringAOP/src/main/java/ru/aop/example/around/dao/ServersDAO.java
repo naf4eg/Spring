@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ServersDAO {
 
-    public void callRuServer() {
+    public void callRuServer(boolean withException) throws Exception {
+        if (withException) throw new Exception();
         try {
             System.out.println("Start call server1");
             Thread.sleep(2000);

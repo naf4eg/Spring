@@ -17,12 +17,17 @@ public class LoggingAspect {
 
     @Around("callServersDaoPointcut()")
     public Object callAroundAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("==>> Executing @Around method: " + proceedingJoinPoint.getSignature().toShortString());
-        long beginTime = System.currentTimeMillis();
-        Object result = proceedingJoinPoint.proceed();
-        long endTime = System.currentTimeMillis();
-        long duration = endTime - beginTime;
-        System.out.println("==>> Executed method for duration: " + duration);
-        return result;
+        try {
+            System.out.println("==>> Executing @Around method: " + proceedingJoinPoint.getSignature().toShortString());
+            long beginTime = System.currentTimeMillis();
+            Object result = proceedingJoinPoint.proceed();
+            long endTime = System.currentTimeMillis();
+            long duration = endTime - beginTime;
+            System.out.println("==>> Executed method for duration: " + duration);
+            return result;
+        } catch (Exception exc) {
+            System.out.println("Exception!!!");
+            throw  exc;
+        }
     }
 }
