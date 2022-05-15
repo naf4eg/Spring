@@ -23,7 +23,6 @@ public class CustomerController {
 
     @GetMapping("list")
     String getCustomers(Model model) {
-        log.info("calling customers list.....");
         var customers = customerService.getCustomers();
         model.addAttribute(CUSTOMERS, customers);
         return CUSTOMERS_LIST;
@@ -31,7 +30,6 @@ public class CustomerController {
 
     @GetMapping("/addCustomerForm")
     String getCustomerForm(Model model) {
-        log.info("call add Customer Form");
         model.addAttribute(CUSTOMER, new Customer());
         return CUSTOMER_FORM;
     }
