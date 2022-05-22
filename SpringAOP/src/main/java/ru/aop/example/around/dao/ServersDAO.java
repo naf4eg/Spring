@@ -1,10 +1,11 @@
 package ru.aop.example.around.dao;
 
 import org.springframework.stereotype.Component;
+import ru.aop.example.around.annotations.Monitoring;
 
 @Component
 public class ServersDAO {
-
+    @Monitoring("CALL_SERVER_RU")
     public void callRuServer(boolean withException) throws Exception {
         if (withException) throw new Exception();
         try {
