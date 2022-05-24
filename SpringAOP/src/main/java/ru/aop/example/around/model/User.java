@@ -1,5 +1,7 @@
 package ru.aop.example.around.model;
 
+import ru.aop.example.around.annotations.Using;
+@Using
 public class User {
     private String name;
 

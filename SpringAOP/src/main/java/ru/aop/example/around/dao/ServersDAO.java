@@ -2,6 +2,7 @@ package ru.aop.example.around.dao;
 
 import org.springframework.stereotype.Component;
 import ru.aop.example.around.annotations.Monitoring;
+import ru.aop.example.around.annotations.Using;
 import ru.aop.example.around.model.User;
 
 @Component
@@ -18,8 +19,10 @@ public class ServersDAO {
         }
     }
     @Monitoring("CALL_SERVER_EN")
-    public void callEnServer(User user, User user2) {
+    public boolean callEnServer(User user) {
         System.out.println("Start call server2");
+        user.getName();
         System.out.println("End call server2");
+        return true;
     }
 }
