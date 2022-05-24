@@ -23,7 +23,7 @@ public class LoggingAspect {
             Object result = proceedingJoinPoint.proceed();
             long endTime = System.currentTimeMillis();
             long duration = endTime - beginTime;
-            System.out.println("==>> Executed method for duration: " + duration);
+            System.out.println("==>> Executed method for duration: " + duration + "\n\n");
             return result;
         } catch (Exception exc) {
             System.out.println("Exception!!!");
