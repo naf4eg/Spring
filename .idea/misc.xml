@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/SpringCore" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringSecurity" />
     <file type="web" url="file://$PROJECT_DIR$/WebApp" />
   </component>
   <component name="JavaScriptSettings">
@@ -17,6 +19,7 @@
         <option value="$PROJECT_DIR$/hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/WebApp/pom.xml" />
         <option value="$PROJECT_DIR$/SpringAOP/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity/pom.xml" />
       </list>
     </option>
   </component>
