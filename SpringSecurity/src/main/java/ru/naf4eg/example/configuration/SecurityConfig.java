@@ -1,0 +1,33 @@
+package ru.naf4eg.example.configuration;
+
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.stereotype.Component;
+
+@Component
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
+
+        auth.inMemoryAuthentication()
+                .withUser(
+                        userBuilder.username("Kostya")
+                                .password("123")
+                                .roles("EMPLOYEE")
+                )
+                .withUser(
+                        userBuilder.username("Mary")
+                                .password("1234")
+                                .roles("MANAGER")
+                )
+                .withUser(
+                        userBuilder.username("Dima")
+                                .password("12345")
+                                .roles("ADMIN")
+                );
+    }
+}
