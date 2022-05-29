@@ -18,10 +18,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin()
-                .loginPage(LoginController.LOGIN_PAGE_URL)
-                .loginProcessingUrl("/authTheUser")
-                .permitAll();
+                    .formLogin()
+                        .loginPage(LoginController.LOGIN_PAGE_URL)
+                        .loginProcessingUrl("/authTheUser")
+                        .permitAll()
+                .and()
+                    .logout()
+                    .permitAll();
+
     }
 
     @Override
