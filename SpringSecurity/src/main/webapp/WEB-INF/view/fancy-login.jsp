@@ -36,7 +36,7 @@
 				<div style="padding-top: 30px" class="panel-body">
 
 					<!-- Login Form -->
-					<form action="${pageContext.request.contextPath}/authTheUser"
+					<form:form action="${pageContext.request.contextPath}/authTheUser"
 							   method="POST" class="form-horizontal">
 
 					    <!-- Place for messages: error, alert etc ... -->
@@ -80,9 +80,8 @@
 							</div>
 						</div>
 
-						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 
-					</form>
+					</form:form>
 
 				</div>
 
