@@ -1,16 +1,18 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: a17839280
-  Date: 01.06.2022
-  Time: 13:48
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Admin Home Page</title>
 </head>
 <body>
+    <h2>Admin Home Page</h2>
+    <hr>
+<p>
+    Hello, Dear my Admin =)
+    <br>
+    This is Admin panel.
+</p>
+    <hr>
+<a href="${pageContext.request.contextPath}\">Back to Home Page</a>
 
 </body>
 </html>
