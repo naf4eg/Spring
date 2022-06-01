@@ -36,17 +36,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser(
                         userBuilder.username("Kostya")
                                 .password("123")
-                                .roles("EMPLOYEE")
+                                .roles(Roles.EMPLOYEE.name())
                 )
                 .withUser(
                         userBuilder.username("Mary")
                                 .password("1234")
-                                .roles("MANAGER", "EMPLOYEE")
+                                .roles(Roles.MANAGER.name(), Roles.EMPLOYEE.name())
                 )
                 .withUser(
                         userBuilder.username("Dima")
                                 .password("12345")
-                                .roles("ADMIN", "EMPLOYEE")
+                                .roles(Roles.ADMIN.name(), Roles.EMPLOYEE.name())
                 );
     }
 }
