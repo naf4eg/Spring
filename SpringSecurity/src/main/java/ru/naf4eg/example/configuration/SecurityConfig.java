@@ -41,12 +41,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser(
                         userBuilder.username("Mary")
                                 .password("1234")
-                                .roles("MANAGER")
+                                .roles("MANAGER", "EMPLOYEE")
                 )
                 .withUser(
                         userBuilder.username("Dima")
                                 .password("12345")
-                                .roles("ADMIN")
+                                .roles("ADMIN", "EMPLOYEE")
                 );
     }
 }
