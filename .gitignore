@@ -1,8 +1,7 @@
 # Project exclude paths
-/SpringCore/target/
-/hibernate/target/
-/SpringAOP/target/
-/SpringSecurity/target/
-/SpringMVC/target/
-/.idea/
-/.idea/libraries/
+/SpringCore/target/**
+/hibernate/target/**
+/SpringAOP/target/**
+/SpringSecurity/target/**
+/SpringMVC/target/**
+/.idea/**
