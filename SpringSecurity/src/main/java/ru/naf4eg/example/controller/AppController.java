@@ -10,4 +10,14 @@ public class AppController {
     public String getHomePage() {
         return "home";
     }
+
+    @RequestMapping("/admins")
+    public String getAdminPage() {
+        return "admins";
+    }
+
+    @RequestMapping("/managers")
+    public String getManagersPage() {
+        return "managers";
+    }
 }
