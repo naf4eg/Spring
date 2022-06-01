@@ -23,7 +23,7 @@
 	<a href="${pageContext.request.contextPath}/admins">Access on Admin</a>
 				(Welcome to Admin panel)
 	<hr>
-	<a href="${pageContext.request.contextPath}/manager">Access on Manager</a>
+	<a href="${pageContext.request.contextPath}/managers">Access on Manager</a>
 	(Welcome to Manager panel)
 	<hr>
 
