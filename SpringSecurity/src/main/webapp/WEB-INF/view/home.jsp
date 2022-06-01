@@ -20,12 +20,17 @@
 		Role(s): <security:authentication property="principal.authorities"/>
 	</p>
 	<hr>
+	<security:authorize access="hasRole('ADMIN')">
 	<a href="${pageContext.request.contextPath}/admins">Access on Admin</a>
 				(Welcome to Admin panel)
 	<hr>
+	</security:authorize>
+
+	<security:authorize access="hasRole('MANAGER')">
 	<a href="${pageContext.request.contextPath}/managers">Access on Manager</a>
 	(Welcome to Manager panel)
 	<hr>
+	</security:authorize>
 
 	<form:form action="${pageContext.request.contextPath}/logout"
 			   method="POST">
