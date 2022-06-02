@@ -1,0 +1,28 @@
+
+-- CREATE TABLE IF NOT EXISTS public.users (
+--   username varchar(50) NOT NULL,
+--   password varchar(50) NOT NULL,
+--   enabled varchar(1) NOT NULL,
+--   PRIMARY KEY (username)
+-- )
+
+-- CREATE TABLE authorities (
+--   username varchar(50) NOT NULL,
+--   authority varchar(50) NOT NULL,
+--   CONSTRAINT authorities_idx_1  UNIQUE (username,authority),
+--   CONSTRAINT authorities_ibfk_1 FOREIGN KEY (username) REFERENCES users (username)
+-- )
+
+-- INSERT INTO users
+-- VALUES
+-- ('Kostya','{noop}123',1),
+-- ('Mary','{noop}1234',1),
+-- ('Dima','{noop}12345',1);
+
+-- INSERT INTO authorities
+-- VALUES
+-- ('Kostya','ROLE_EMPLOYEE'),
+-- ('Mary','ROLE_EMPLOYEE'),
+-- ('Mary','ROLE_MANAGER'),
+-- ('Dima','ROLE_EMPLOYEE'),
+-- ('Dima','ROLE_ADMIN');
