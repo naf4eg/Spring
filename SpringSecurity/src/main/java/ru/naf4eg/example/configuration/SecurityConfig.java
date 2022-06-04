@@ -1,5 +1,6 @@
 package ru.naf4eg.example.configuration;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -8,9 +9,15 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 import ru.naf4eg.example.controller.LoginController;
 
+import javax.sql.DataSource;
+
 @Component
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private DataSource securityDataSource;
+
     /*Custom login form*/
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -34,23 +41,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
+        auth.jdbcAuthentication().dataSource(securityDataSource);
 
-        auth.inMemoryAuthentication()
-                .withUser(
-                        userBuilder.username("Kostya")
-                                .password("123")
-                                .roles(Roles.EMPLOYEE.name())
-                )
-                .withUser(
-                        userBuilder.username("Mary")
-                                .password("1234")
-                                .roles(Roles.MANAGER.name(), Roles.EMPLOYEE.name())
-                )
-                .withUser(
-                        userBuilder.username("Dima")
-                                .password("12345")
-                                .roles(Roles.ADMIN.name(), Roles.EMPLOYEE.name())
-                );
+//        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
+//
+//        auth.inMemoryAuthentication()
+//                .withUser(
+//                        userBuilder.username("Kostya")
+//                                .password("123")
+//                                .roles(Roles.EMPLOYEE.name())
+//                )
+//                .withUser(
+//                        userBuilder.username("Mary")
+//                                .password("1234")
+//                                .roles(Roles.MANAGER.name(), Roles.EMPLOYEE.name())
+//                )
+//                .withUser(
+//                        userBuilder.username("Dima")
+//                                .password("12345")
+//                                .roles(Roles.ADMIN.name(), Roles.EMPLOYEE.name())
+//                );
     }
 }
