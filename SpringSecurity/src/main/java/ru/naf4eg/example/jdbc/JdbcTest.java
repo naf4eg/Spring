@@ -4,9 +4,9 @@ import java.sql.DriverManager;
 
 public class JdbcTest {
     public static void main(String[] args) {
-        String jdbc = "jdbc:postgresql://localhost:5432/spring_security_demo?useSSL=false";
-        String user = "hiber";
-        String password = "password";
+        String jdbc = "jdbc:postgresql://localhost:5432/spring_security_demo_bcrypt?useSSL=false";
+        String user = "spring_security";
+        String password = "123";
 
         try {
             System.out.print("Connect ===>>  ");

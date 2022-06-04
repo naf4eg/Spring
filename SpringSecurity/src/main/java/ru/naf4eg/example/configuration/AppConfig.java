@@ -48,7 +48,8 @@ public class AppConfig {
         } catch (PropertyVetoException e) {
             throw new RuntimeException(e);
         }
-        pooledDataSource.setJdbcUrl(environment.getProperty("jdbc.url"));
+        //pooledDataSource.setJdbcUrl(environment.getProperty("jdbc.url"));
+        pooledDataSource.setJdbcUrl(environment.getProperty("jdbc.url.bcrypt"));
         pooledDataSource.setUser(environment.getProperty("jdbc.user"));
         pooledDataSource.setPassword(environment.getProperty("jdbc.password"));
         pooledDataSource.setInitialPoolSize(getIntProp(environment.getProperty("connection.pool.initialPoolSize")));
