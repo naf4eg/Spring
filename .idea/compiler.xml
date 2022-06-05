@@ -12,6 +12,7 @@
         <module name="SpringCore" />
         <module name="SpringMVC" />
         <module name="JSON" />
+        <module name="SpringREST" />
         <module name="hibernate" />
         <module name="WebApp" />
       </profile>

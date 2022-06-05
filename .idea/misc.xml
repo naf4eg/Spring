@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/SpringAOP/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity/pom.xml" />
         <option value="$PROJECT_DIR$/JSON/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringREST/pom.xml" />
       </list>
     </option>
   </component>
