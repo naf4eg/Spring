@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/SpringCore" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringREST" />
     <file type="web" url="file://$PROJECT_DIR$/SpringSecurity" />
     <file type="web" url="file://$PROJECT_DIR$/WebApp" />
   </component>
