@@ -11,6 +11,6 @@ public class DemoRestController {
 
     @GetMapping("/")
     String sayHello() {
-        return "Hello World " + "\n" + LocalDateTime.now() + "\n" + OffsetDateTime.now();
+        return "Hello World " + "\n\n" + LocalDateTime.now() + "\n\n" + OffsetDateTime.now();
     }
 }
